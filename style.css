@@ -1,0 +1,124 @@
+/* GLOBAL SETTINGS */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --purple-base: #993cf0;
+    --purple-hover: #b063f8;
+    --bg-alert: #f8f85f;
+    --bg-color: #EDF2FF;
+    --text-color: #00082F;
+
+    font-size: 62.5%;
+}
+
+body{
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    font-family: 'Fira Code', monospace;
+    background-color: var(--bg-color);
+}
+
+.main-container{
+    text-align: center;
+    width: 30rem;
+    height: 100%;
+    margin: 5rem 1rem;
+}
+
+img{
+    width: 100%;
+}
+
+.coming-soon{
+    position: relative;
+    overflow: hidden;
+}
+
+.coming-soon::after{
+    content: 'Em breve';
+    color: var(--text-color);
+    font-size: 1rem;
+    position: absolute;
+    right: -3rem;
+    top: .8rem;
+    padding-inline: 2.5rem;
+    transform: rotate(45deg);
+    background-color: var(--bg-alert);
+}
+
+/* HEADER */
+header img{
+    border-radius: 50%;
+    width: 11rem;
+    padding: .27rem;
+    border: .3rem solid var(--purple-base);
+}
+
+header h1{
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 3.75rem;
+    margin-block: 2.4rem 0.8rem;
+}
+
+header p::before{
+    content: '<';
+    color: var(--purple-base);
+    margin-right: .2rem;
+}
+
+header p{
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 2.7rem;
+    opacity: 0.8;
+}
+
+header p::after{
+    content: '/>';
+    color: var(--purple-base);
+}
+
+/* MAIN */
+main ul{
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    list-style: none;
+    margin-block: 4.8rem;
+}
+
+ul li a{
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 2.1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    width: 100%;
+    height: 5.3rem;
+    transition: background 400ms;
+    border-radius: .6rem;
+    background-color: var(--purple-base);
+}
+
+ul li a:hover{
+    background-color: var(--purple-hover);
+}
+
+/* FOOTER */
+footer p{
+    font-size: 1.3rem;
+    font-weight: 400;
+    line-height: 1.6rem;
+    opacity: 0.8;
+}
